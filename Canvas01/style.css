@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Pacifico", cursive;
+  color: #fff;
+}
+
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 3vw;
+  padding: 0 1rem;
+  text-align: center;
+  background-image: linear-gradient(
+    to right top,
+    rgb(6, 47, 6),
+    #eae612,
+    #b60f0c,
+    white
+  );
+  background-size: 50% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 7.5s ease alternate infinite;
+}
+
+@keyframes gradientAnimation {
+  to {
+    background-position: 100% top;
+  }
+}
+
+p {
+    margin-top: 45px;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-family: "Work Sans", sans-serif;
+}
+
+img {
+  z-index: 1;
+  bottom: 5%;
+}
+
+.image-container {
+  display: flex;
+  z-index: 1;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+}
+
+#avatar{
+    height: 250px;
+}
+
+img,
+canvas {
+  cursor: pointer;
+  position: absolute;
+}
+
+
+/* <canvas> по умолчанию не является настоящим background-элементом,
+а скорее “рисуется над всем”, если его не отодвинуть назад. */
+
+/* cursor: pointer;
+Это свойство меняет вид курсора мыши, когда пользователь наводит его на элемент.
+pointer означает, что курсор станет рукой (как при наведении на ссылку) 🖐️
+Обычно это используется, чтобы показать, что по элементу можно кликнуть. */
+/* It is also essential to set canvas elements to the position absolute as we want to overlay them on top of each other for an immersive experience. */
